@@ -10,6 +10,9 @@ chai.use(chaiHttp);
 describe('API endpoints', function () {
     var server;
 
+    after(function () {
+        process.exit()
+    });
 
     describe('GET /', function () {
         it('should return a JSON response with status 200', function (done) {
