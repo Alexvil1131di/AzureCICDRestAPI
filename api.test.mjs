@@ -66,7 +66,7 @@ describe('API endpoints', function () {
                 .end(function (err, res) {
                     expect(res).to.have.status(200);
                     expect(res).to.be.json;
-                    expect(res.body.response).to.equal('This is PUT method aaa.');
+                    expect(res.body.response).to.equal('This is PUT method.');
                     done();
                 });
         });
