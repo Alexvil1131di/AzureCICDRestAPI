@@ -1,8 +1,9 @@
 'use strict';
-var app = require('./server.mjs');
+import app from './server.mjs';
+import chai from 'chai';
 
-var chai = require('chai');
-var chaiHttp = require('chai-http');
+import chaiHttp from 'chai-http';
+
 var expect = chai.expect;
 
 chai.use(chaiHttp);

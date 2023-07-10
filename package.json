@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "npx mocha api.test.js",
+    "test": "npx mocha api.test.mjs",
     "start": "node server.mjs"
   },
   "dependencies": {
