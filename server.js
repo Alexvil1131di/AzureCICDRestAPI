@@ -1,7 +1,37 @@
 'use strict';
-
-var express = require('express');
+import express from 'express';
 var app = express();
+import fetch from 'node-fetch';
+
+app.get('/randomFact', (req, res) => {
+   fetch('https://catfact.ninja/fact')
+   .then(res => res.json())
+   .then(data => res.status(200).json({randomFact: data}))
+   .catch(err => {
+      console.log(err);
+      res.status(500).json({error: err});
+   })
+}) 
+
+app.get('/randomFacts', (req, res) => {
+   fetch('https://catfact.ninja/facts')
+   .then(res => res.json())
+   .then(data => res.status(200).json({randomFacts: data}))
+   .catch(err => {
+      console.log(err);
+      res.status(500).json({error: err});
+   })
+})
+
+app.get('/randomBreeds', (req, res) => {
+   fetch('https://catfact.ninja/breeds')
+   .then(res => res.json())
+   .then(data => res.status(200).json({randomBreeds: data}))
+   .catch(err => {
+      console.log(err);
+      res.status(500).json({error: err});
+   })
+}) 
 
 app.set("port", process.env.PORT || 4000);
 
@@ -49,4 +79,5 @@ var server = app.listen(app.get("port"), function () {
 
 })
 
-module.exports = app;
+export default app;
+
