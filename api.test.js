@@ -30,8 +30,7 @@ describe('API endpoints', function () {
 
     describe('GET /:id', function () {
         it('should return a JSON response with status 200 and the provided id', function (done) {
-            var id = 123; // Cambia esto por el ID que desees probar
-
+            var id = 123; 
             chai
                 .request(app)
                 .get('/' + id)
