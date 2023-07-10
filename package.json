@@ -6,7 +6,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "npx mocha api.test.js"
+    "test": "npx mocha api.test.js",
+    "start": "node server.mjs"
   },
   "dependencies": {
     "chai-http": "^4.4.0",

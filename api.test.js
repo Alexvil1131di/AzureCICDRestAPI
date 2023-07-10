@@ -1,5 +1,5 @@
 'use strict';
-var app = require('./server');
+var app = require('./server.mjs');
 
 var chai = require('chai');
 var chaiHttp = require('chai-http');
@@ -30,7 +30,7 @@ describe('API endpoints', function () {
 
     describe('GET /:id', function () {
         it('should return a JSON response with status 200 and the provided id', function (done) {
-            var id = 123; 
+            var id = 123;
             chai
                 .request(app)
                 .get('/' + id)
